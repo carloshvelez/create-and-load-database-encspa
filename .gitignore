@@ -1,0 +1,22 @@
+# Exclude Python cache files
+__pycache__/
+*.py[cod]
+
+# Exclude environment files
+venv/
+.env
+
+# Exclude files in data directories
+csv_data/*
+json_data/*
+database/*
+
+# Exclude OS-specific files
+.DS_Store
+Thumbs.db
+
+# Exclude Python egg files
+*.egg
+*.egg-info/
+dist/
+build/
