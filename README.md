@@ -53,64 +53,7 @@ El flujo de trabajo de la aplicación es el siguiente:
    
 ## Uso
 
-1. **Descargar Diccionarios**:
-    La función `obtener_diccionarios()` descarga los diccionarios de datos desde el enlace del DANE y los guarda en la carpeta especificada.
-    ```python
-    from lib.obtener_diccionarios import obtener_diccionarios
-
-    obtener_diccionarios()
+una vez instalado, únicamente se debe ejecutar el archivo `main.py`
+```sh
+    python main.py
     ```
-
-2. **Reducir Diccionarios**:
-    La función `reducir_diccionarios()` procesa los diccionarios descargados para eliminar información redundante.
-    ```python
-    from lib.reducir_diccionarios import reducir_diccionarios
-
-    reducir_diccionarios()
-    ```
-
-3. **Crear Tablas**:
-    La función `crear_tablas()` crea las tablas en la base de datos SQLite utilizando los diccionarios reducidos.
-    ```python
-    from lib.crear_tablas import crear_tablas
-
-    crear_tablas()
-    ```
-
-4. **Cargar Datos**:
-    Los archivos CSV se cargan en las tablas de la base de datos utilizando la función `importar_tabla_bd()` para cada archivo y tabla.
-    ```python
-    from lib.importar_datos_bd import importar_tabla_bd
-    import utils.categorias as categorias
-
-    for nombre_tabla, nombre_archivo in categorias.categorias.items():
-        importar_tabla_bd(nombre_archivo, nombre_tabla)
-    ```
-
-5. **Ejecutar el Flujo Completo**:
-    Puedes ejecutar todas las funciones anteriores en el orden correcto llamando a la función `main()` en `main.py`.
-    ```python
-    if __name__ == "__main__":
-        main()
-    ```
-
-## Ejemplo
-
-```python
-# main.py
-
-from lib import crear_tablas, importar_datos_bd, obtener_diccionarios, reducir_diccionarios
-import utils.categorias as categorias
-
-def main():
-    obtener_diccionarios.obtener_diccionarios()
-    reducir_diccionarios.reducir_diccionarios()
-    crear_tablas.crear_tablas()
-
-    for nombre_tabla, nombre_archivo in categorias.categorias.items():
-        importar_datos_bd.importar_tabla_bd(nombre_archivo, nombre_tabla)
-    
-    print("Trabajo realizado con éxito. Ahora puede usar los diccionarios y la base de datos")
-
-if __name__ == "__main__":
-    main()
