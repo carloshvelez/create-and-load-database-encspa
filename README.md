@@ -54,9 +54,9 @@ El flujo de trabajo de la aplicación es el siguiente:
 ## Uso
 
 Una vez instalado, únicamente se debe ejecutar el archivo `main.py`
-    ```sh
+```sh
     python main.py
-    ```
+   ```
 
 ## Referencias: 
 La fuente de microdatos para la Encuesta Nacional de Consumo de SPA - 2019 es la siguiente: 
@@ -136,9 +136,9 @@ app/
 ## Usage
 
 Once installed, simply execute the `main.py` file:
-    ```sh
+```sh
     python main.py
-    ```
+   ```
 
 ## References
 
