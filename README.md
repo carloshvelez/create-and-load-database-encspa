@@ -33,7 +33,7 @@ El flujo de trabajo de la aplicación es el siguiente:
 
 1. Clona el repositorio en tu máquina local:
     ```sh
-    git clone https://github.com/tu-usuario/tu-repositorio.git
+    git clone https://github.com/carloshvelez/create-and-load-database-encspa
     cd tu-repositorio
     ```
 
@@ -115,7 +115,7 @@ app/
 
 1. Clone the repository to your local machine:
     ```sh
-    git clone https://github.com/your-username/your-repository.git
+    git clone https://github.com/carloshvelez/create-and-load-database-encspa
     cd your-repository
     ```
 
